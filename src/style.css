@@ -1,0 +1,89 @@
+/* body div{
+    background: linear-gradient(to bottom right,#0a0c48, #565acd);
+    height: 100vh;
+    width: 100vb;
+    display: flex;
+    color: white;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+.temperature img{
+    width: 35vh;
+    height: 20vb;
+} */
+
+body {
+  background: linear-gradient(to bottom right, #0a0c48, #565acd);
+  height: 100vh;
+  width: 100vb;
+  background-repeat: no-repeat;
+}
+
+.block {
+  height: 100vh;
+  width: 100vb;
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80vb;
+}
+
+.inputCity {
+  width: 70vb;
+  margin: 0;
+  padding: 0;
+}
+.inputCityBlock {
+  display: flex;
+}
+
+.temperature {
+  font-size: 15vw;
+}
+
+li {
+  list-style-type: none;
+}
+
+.buttonInputCity {
+  right: 100px;
+}
+
+.listCityes {
+  display: none;
+  background-color: aliceblue;
+  color: #383951;
+  width: 70vb;
+  margin: 0;
+  padding: 0;
+
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.show {
+  display: block;
+}
+
+.temperatureBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 3vw;
+}
+
+.buttonCity {
+  width: 100%;
+}
