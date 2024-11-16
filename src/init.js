@@ -30,6 +30,7 @@ export async function init(div) {
 
   const temperatureBlockWithInfo = document.createElement("div");
   const temperatureBlockWithImg = document.createElement("div");
+  temperatureBlockWithImg.className = "temperatureBlockWithImg";
 
   const temperature = document.createElement("div");
   temperature.className = "temperature";
@@ -63,6 +64,7 @@ export async function init(div) {
     render(await userCity);
   } else {
     const lastCity = localStorage.getItem("lastCity");
+    //сделать обработку ошибок на непрвильные города
     render(lastCity);
   }
   let allCityes = JSON.parse(localStorage.getItem("cityes"));
