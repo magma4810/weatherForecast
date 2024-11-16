@@ -13,5 +13,5 @@ export async function render(city) {
   const imgTemperature = document.querySelector(".imgTemperature");
   weatherIn.textContent = `Погода в "${name}"`;
   temperature.textContent = `${weather.temp}˚`; //04n
-  imgTemperature.src = `https://openweathermap.org/img/wn/${img}@2x.png>`;
+  imgTemperature.src = `https://openweathermap.org/img/wn/${img}@2x.png`;
 }
