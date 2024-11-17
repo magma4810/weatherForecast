@@ -63,7 +63,7 @@ export async function init(div) {
     localStorage.setItem("lastCity", JSON.stringify(await userCity));
     render(await userCity);
   } else {
-    const lastCity = localStorage.getItem("lastCity");
+    const lastCity = JSON.parse(localStorage.getItem("lastCity"));
     //сделать обработку ошибок на непрвильные города
     render(lastCity);
   }
