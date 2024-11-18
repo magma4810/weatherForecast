@@ -76,3 +76,19 @@ li {
   margin-bottom: 10px;
   transform: scale(2);
 }
+
+.informationBlock {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  text-align: center;
+  margin: 5px;
+  width: 50vb;
+  height: 8vh;
+  font-size: 3vw;
+}
