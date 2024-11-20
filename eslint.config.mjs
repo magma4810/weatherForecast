@@ -7,7 +7,8 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser,
-        ...globals.node, // Добавить глобалы Node.js
+        ...globals.node,
+        ...globals.jest,
       },
     },
   },
