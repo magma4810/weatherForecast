@@ -11,7 +11,8 @@ export async function getWeather(city) {
       }
       throw new Error("Произошла ошибка при получении данных");
     }
-    return await response.json();
+    const result = await response.json();
+    return result;
   } catch (e) {
     alert(e.message);
     return null;
