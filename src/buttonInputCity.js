@@ -14,8 +14,8 @@ export async function buttonInputCity() {
           listCityes.childNodes[0].remove();
           allCityes.shift();
         }
-        createNewCity(value);
-        allCityes.push(value);
+        allCityes.CITY.push(value);
+        createNewCity(allCityes);
         localStorage.setItem("cityes", JSON.stringify(allCityes));
         localStorage.setItem("lastCity", JSON.stringify(value));
       }

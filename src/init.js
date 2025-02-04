@@ -33,23 +33,28 @@ export async function init(div) {
   div.append(informationBlock);
 
   if (!localStorage.getItem("cityes")) {
+    const cityes = {
+      CITY: [],
+    };
     const userCity = fetch("https://get.geojs.io/v1/ip/geo.json")
       .then((ip) => ip.json())
       .then((userCity) => userCity.city);
-    localStorage.setItem("cityes", JSON.stringify([await userCity]));
+    cityes.CITY.push(await userCity);
+    localStorage.setItem("cityes", JSON.stringify(cityes));
     localStorage.setItem("lastCity", JSON.stringify(await userCity));
     render(await userCity);
   } else {
     const lastCity = JSON.parse(localStorage.getItem("lastCity"));
     render(lastCity);
   }
-  let allCityes = JSON.parse(localStorage.getItem("cityes"));
+  let cityes = JSON.parse(localStorage.getItem("cityes"));
   buttonInputCity();
   document.querySelector(".inputCity").addEventListener("click", () => {
     document.querySelector(".listCityes").classList.add("show");
   });
 
-  allCityes.forEach((element) => {
-    createNewCity(element);
-  });
+  // cityes.CITY.forEach((element) => {
+  //   createNewCity(element);
+  // });
+  createNewCity(cityes);
 }
